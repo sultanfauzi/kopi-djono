@@ -1,0 +1,50 @@
+.topbar{height:66px;position:sticky;top:0;z-index:30;background:rgba(245,235,221,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(26,26,26,.12);display:flex;align-items:center;padding:0 max(calc((100vw - 1180px)/2),24px);gap:34px}
+.mobile-brand{font:700 18px 'Oswald',sans-serif;letter-spacing:.04em}
+.mobile-brand span{color:#8c522c}
+.desktop-nav{display:flex;align-items:center;gap:30px;margin-left:auto}
+.desktop-nav a{font-size:12px;font-weight:600;color:#51483e}
+.desktop-nav a:hover,.back-top:hover{color:var(--caramel)}
+.top-order{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;display:flex;gap:9px;align-items:center}
+.header-cart{position:relative;border:0;background:var(--ink);color:#fff;width:36px;height:36px;border-radius:50%;display:grid;place-items:center}
+.header-cart i,.floating-icon i{position:absolute;top:-5px;right:-5px;background:#c8863a;color:#fff;font-style:normal;font-size:9px;font-weight:700;min-width:17px;height:17px;border-radius:20px;display:grid;place-items:center;border:2px solid var(--cream)}
+.hero{background:#1a1a1a;color:#f8efe3;min-height:600px;position:relative;overflow:hidden;padding:55px max(calc((100vw - 1180px)/2),24px) 0}
+.hero:before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 78% 44%,rgba(158,99,46,.2),transparent 35%),radial-gradient(ellipse at 9% 90%,rgba(200,134,58,.1),transparent 30%);pointer-events:none}
+.hero-grain{position:absolute;inset:0;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+.hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.03fr .97fr;align-items:center;min-height:490px;position:relative}
+.hero-copy{padding-bottom:34px;z-index:1}
+.hero-kicker,.eyebrow{font-size:9px;letter-spacing:.2em;font-weight:700}
+.hero-kicker{display:flex;align-items:center;gap:9px;color:#d7b993;margin-bottom:20px}
+.hero-kicker span{width:20px;height:1px;background:#c8863a}
+.hero h1,h2{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:-.025em}
+.hero h1{font-size:clamp(55px,7vw,90px);line-height:.98;margin:0 0 18px;max-width:610px}
+.hero h1 em,.section-heading h2 em,.story-inner h2 em,.visit-head h2 em,.drawer-head h2 em{font-weight:500;color:#c8863a}
+.hero-sub{font-size:13px;line-height:1.75;color:#c6bbae;margin:0 0 26px}
+.hero-actions{display:flex;gap:10px;align-items:center}
+.hero-note{font-size:8px;letter-spacing:.16em;color:#8f877c;margin-top:43px;display:flex;gap:11px;align-items:center}
+.hero-visual{height:475px;position:relative;display:flex;align-items:center;justify-content:center}
+.hero-visual:before{content:'';position:absolute;width:320px;height:320px;border:1px solid rgba(245,235,221,.14);border-radius:50%}
+.hero-visual:after{content:'';position:absolute;width:260px;height:260px;border:1px dashed rgba(245,235,221,.12);border-radius:50%}
+.sun-stamp{position:absolute;z-index:4;right:8%;top:44px;width:93px;height:93px;border-radius:50%;background:#c8863a;color:#211b16;display:grid;place-items:center;text-align:center;font:600 13px/1.15 'Oswald',sans-serif;transform:rotate(10deg);outline:1px dashed #1a1a1a;outline-offset:-6px}
+.hero-cup-wrap{position:relative;z-index:2;transform:rotate(-7deg);margin-top:15px;animation:float 5s ease-in-out infinite}
+.hero-cup{width:202px;height:280px;background:linear-gradient(100deg,rgba(255,255,255,.27),rgba(255,255,255,.08) 21%,rgba(255,255,255,.02) 55%,rgba(255,255,255,.17));clip-path:polygon(5% 0,95% 0,82% 100%,18% 100%);position:relative;border:1px solid rgba(255,255,255,.5);display:grid;place-items:center;overflow:hidden;box-shadow:inset 18px 0 22px rgba(255,255,255,.08)}
+.hero-cup:after{content:'';position:absolute;inset:13px 18px 0;background:linear-gradient(to bottom,#a85f30 8%,#d0a173 27%,#e2c19c 100%);clip-path:polygon(0 0,100% 0,84% 100%,16% 100%);z-index:-1}
+.hero-cup-lid{position:absolute;top:-2px;left:-2%;width:104%;height:20px;background:#ddd1c0;border-radius:50%;z-index:2}
+.hero-cup-straw{position:absolute;top:-47px;right:45px;width:9px;height:106px;background:#c8863a;transform:rotate(-7deg);border:1px solid rgba(0,0,0,.25);z-index:1}
+.hero-cup-logo{width:116px;height:116px;border-radius:50%;background:#171717;color:#f5ebdd;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;font:600 17px/1 'Oswald',sans-serif;letter-spacing:.06em;transform:rotate(7deg)}
+.hero-cup-logo b{font-size:22px}
+.hero-cup-logo i{font-style:normal;color:#c8863a;font-size:17px;margin-top:7px}
+.hero-cup-drink{position:absolute;inset:25px 30px 0;border-left:1px solid rgba(255,255,255,.4);border-right:1px solid rgba(255,255,255,.25);pointer-events:none}
+.hero-shadow{position:absolute;width:220px;height:25px;border-radius:50%;background:rgba(0,0,0,.45);filter:blur(11px);bottom:-17px;left:5px;z-index:-1}
+.hero-beans{position:absolute;color:#c8863a;font-size:35px;opacity:.75}
+.visual-caption{position:absolute;bottom:13px;left:8%;right:8%;display:flex;justify-content:space-between;border-top:1px solid #4a4034;padding-top:12px;color:#84796b;font-size:8px;letter-spacing:.16em;z-index:2}
+.hero-bottom{position:relative;z-index:2;max-width:1180px;height:50px;border-top:1px solid #39352f;margin:auto;display:flex;align-items:center;justify-content:space-between;color:#857a6e;font-size:8px;letter-spacing:.16em}
+.hero-bottom span:last-child{display:flex;align-items:center;gap:8px}
+.footer{background:#1a1a1a;color:#f5ebdd;padding:30px max(calc((100vw - 1180px)/2),24px) 0}
+.footer-top{min-height:92px;display:flex;align-items:center;gap:22px;border-bottom:1px solid #39342e}
+.brand{width:58px;height:58px;border-radius:50%;background:#090909;border:1px solid #594b3a;color:#f5ebdd;display:flex;flex-direction:column;align-items:center;justify-content:center;font:600 10px/.95 'Oswald',sans-serif;letter-spacing:.04em;flex:0 0 auto}
+.brand-cup{font-size:12px;line-height:1.15;filter:grayscale(1)}
+.brand-small{width:48px;height:48px;font-size:8px}
+.brand-small .brand-cup{font-size:10px}
+.footer-top p{font-size:10px;line-height:1.65;color:#a79c8e;margin:0}
+.back-top{margin-left:auto;font-size:8px;letter-spacing:.15em;color:#b9aa98}
+.footer-bottom{height:43px;display:flex;justify-content:space-between;align-items:center;color:#81786c;font-size:7px;letter-spacing:.12em}

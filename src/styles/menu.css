@@ -1,0 +1,35 @@
+.menu-section{padding-top:86px;padding-bottom:65px}
+.menu-tools{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d7c7b2;margin-bottom:22px}
+.tabs{display:flex;gap:22px}
+.tabs button{border:0;background:transparent;padding:12px 1px 14px;color:#897968;font-size:11px;font-weight:700;position:relative}
+.tabs button span{font-size:8px;vertical-align:super;margin-left:3px;opacity:.7}
+.tabs button.active{color:#1a1a1a}
+.tabs button.active:after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:2px;background:#1a1a1a}
+.search-box{height:35px;width:218px;border:1px solid #d8caba;display:flex;align-items:center;gap:8px;padding:0 9px;color:#887b6d}
+.search-box input{border:0;background:transparent;outline:0;min-width:0;width:100%;font-size:10px;color:#1a1a1a}
+.search-box input::placeholder{color:#9b8d7d}
+.search-box kbd{font-size:15px;color:#9a8a76}
+.menu-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.menu-card{border:1px solid #dfd2c1;background:#f8f1e7;transition:transform .2s,border-color .2s;animation:rise .5s both}
+.menu-card:hover{transform:translateY(-3px);border-color:#b98d60}
+.menu-card-art{height:175px;background:#ede0cd;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.menu-card-art:before{content:'';position:absolute;width:140px;height:140px;border:1px solid rgba(107,68,35,.13);border-radius:50%}
+.menu-card-art:after{content:'✳';position:absolute;right:17px;bottom:11px;color:rgba(107,68,35,.2);font-size:28px}
+.drink-label{position:absolute;left:12px;top:13px;font-size:7px;line-height:1.45;letter-spacing:.14em;color:#9b7650;font-weight:700}
+.best-badge{position:absolute;right:10px;top:10px;background:#1a1a1a;color:#f5ebdd;padding:5px 7px;font-size:7px;font-weight:700;letter-spacing:.09em;z-index:2}
+.cup-art{--cup-color:#c47a43;position:relative;width:72px;height:98px;z-index:1;clip-path:polygon(3% 0,97% 0,85% 100%,15% 100%);background:linear-gradient(90deg,rgba(255,255,255,.22),var(--cup-color) 22%,var(--cup-color) 75%,rgba(255,255,255,.35));box-shadow:inset 0 0 0 1px rgba(255,255,255,.6);filter:drop-shadow(4px 8px 5px rgba(59,39,19,.2));display:flex;align-items:center;justify-content:center}
+.cup-art:before{content:'';position:absolute;top:0;left:-2%;width:104%;height:9px;border-radius:50%;background:#e9dfd3;border:1px solid rgba(87,62,38,.25);z-index:3}
+.cup-art:after{content:'';position:absolute;left:12%;right:12%;bottom:13px;height:49px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(58,34,19,.18));clip-path:polygon(0 0,100% 0,90% 100%,10% 100%)}
+.cup-straw{position:absolute;width:4px;height:38px;background:#b26b34;top:-27px;left:54px;transform:rotate(7deg);z-index:-1}
+.cup-sleeve{font:700 10px 'Oswald',sans-serif;color:#f7eee4;border-radius:50%;width:40px;height:40px;background:#1a1a1a;display:grid;place-items:center;z-index:2;letter-spacing:.05em;transform:rotate(-3deg)}
+.cup-ice{position:absolute;top:17px;width:12px;height:10px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.45);transform:rotate(30deg);z-index:2}
+.menu-card-info{min-height:134px;padding:13px 13px 12px;display:flex;justify-content:space-between;gap:7px}
+.item-copy{min-width:0}
+.item-category{font-size:7px;letter-spacing:.13em;color:#9b7650;font-weight:700}
+.item-copy h3{font:600 18px/1.15 'Oswald',sans-serif;margin:5px 0 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.item-copy p{font-size:9px;line-height:1.45;color:#897b6a;margin:0 0 9px;min-height:26px}
+.item-copy strong{font-size:11px}
+.add-button{align-self:flex-end;flex:0 0 30px;width:30px;height:30px;display:grid;place-items:center;border:1px solid #cdbba4;background:transparent;color:#1a1a1a;transition:.2s}
+.add-button:hover,.add-button.added{background:#1a1a1a;color:#f5ebdd;border-color:#1a1a1a}
+.empty-results{text-align:center;padding:40px 10px;color:#817362;font-size:13px}
+.menu-foot{border-top:1px solid #d7c7b2;margin-top:30px;padding-top:12px;display:flex;justify-content:space-between;color:#968674;font-size:7px;letter-spacing:.14em}

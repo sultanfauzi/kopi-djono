@@ -1,0 +1,41 @@
+.story-section{min-height:388px;background:#e9dbc7;padding:63px max(calc((100vw - 1180px)/2),24px);position:relative;overflow:hidden;display:flex;align-items:center}
+.story-inner{max-width:1180px;width:100%;margin:auto;position:relative;z-index:1}
+.story-inner .eyebrow{margin-bottom:13px}
+.story-inner h2{font-size:49px;line-height:1.04;margin:0 0 15px}
+.story-body{max-width:415px;color:#6e6255;font-size:11px;line-height:1.8;margin-bottom:17px}
+.story-sign{margin-top:30px;color:#a18869;font-size:8px;letter-spacing:.17em}
+.story-decoration{position:absolute;right:20%;top:-125px;font:600 400px/.9 'Oswald',sans-serif;letter-spacing:-.08em;color:rgba(107,68,35,.055);transform:rotate(-12deg)}
+.story-decoration span{position:absolute;font:70px sans-serif;top:85px;right:-50px;color:rgba(107,68,35,.14)}
+.story-seal{position:absolute;right:max(calc((100vw - 1040px)/2),8%);top:50%;transform:translateY(-50%) rotate(9deg);width:143px;height:143px;border:1px solid #a78660;border-radius:50%;outline:1px dashed #a78660;outline-offset:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#6b4423}
+.story-seal span{font:600 18px/1.1 'Oswald',sans-serif}
+.story-seal i{font-size:22px;font-style:normal;color:#c8863a;margin:5px}
+.story-seal small{font-size:6px;letter-spacing:.12em}
+.visit-section{padding-top:75px;padding-bottom:80px}
+.visit-head{text-align:center;margin-bottom:32px}
+.visit-head h2{font-size:48px;margin-bottom:7px}
+.visit-head>p:last-child{font-size:11px;color:#897b6a;margin:11px 0 0}
+.visit-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:16px;max-width:920px;margin:auto}
+.location-card{border:1px solid #ded0bd;background:#f8f1e7}
+.location-graphic{height:203px;position:relative;overflow:hidden;background:#e9dfcf}
+.map-grid{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(135,112,82,.1) 1px,transparent 1px),linear-gradient(rgba(135,112,82,.1) 1px,transparent 1px);background-size:30px 30px;transform:rotate(-8deg) scale(1.3)}
+.map-road{position:absolute;height:13px;background:#f5ebdd;border:1px solid #dbcebb;transform:rotate(-25deg);width:120%;left:-10%}
+.map-pin{position:absolute;left:50%;top:43%;color:#8d512c;transform:translate(-50%,-50%);filter:drop-shadow(0 3px 3px #88745c)}
+.map-label{position:absolute;left:calc(50% + 15px);top:36%;padding:6px 8px;background:#1a1a1a;color:#f5ebdd;font-size:8px;letter-spacing:.11em}
+.map-neighborhood{position:absolute;right:15px;bottom:12px;color:#a18f78;font-size:7px;letter-spacing:.15em}
+.location-detail{padding:16px;display:flex;align-items:center;gap:12px}
+.detail-icon{width:36px;height:36px;display:grid;place-items:center;background:#ede0cd;color:#7c502f;flex:0 0 36px}
+.location-detail>div:nth-child(2){flex:1}
+.location-detail span,.hours-card>div:nth-child(2)>span{font-size:7px;font-weight:700;letter-spacing:.13em;color:#9a7959}
+.location-detail p,.hours-card p{font-size:10px;font-weight:600;margin:4px 0 0}
+.location-detail>a{border:1px solid #d6c6b1;width:29px;height:29px;display:grid;place-items:center}
+.visit-side{display:flex;flex-direction:column;gap:12px}
+.hours-card{border:1px solid #ded0bd;padding:19px 17px;display:flex;align-items:center;gap:12px;position:relative;background:#f8f1e7;min-height:84px}
+.hours-card>div:nth-child(2){flex:1}
+.hours-card small{font-size:9px;color:#938370;display:block;margin-top:5px}
+.open-dot{width:7px;height:7px;border-radius:50%;background:#648352;box-shadow:0 0 0 4px #e0ead9;position:absolute;right:17px;top:20px}
+.visit-cta{background:#e9dbc7;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:85px}
+.visit-cta p{font:600 17px 'Oswald',sans-serif;margin:0 0 3px}
+.visit-cta span{font-size:9px;color:#89735a}
+.visit-cta .button{height:36px;font-size:9px;padding:0 12px;white-space:nowrap}
+.instagram-link{height:39px;display:flex;align-items:center;gap:10px;padding:0 3px;font-size:8px;font-weight:700;letter-spacing:.11em;color:#654b32}
+.instagram-link svg:last-child{margin-left:auto}

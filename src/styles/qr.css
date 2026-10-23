@@ -1,0 +1,18 @@
+.qr-page{min-height:100vh;display:grid;place-items:center;padding:20px;background:#1a1a1a;color:#f5ebdd;position:relative;overflow:hidden}
+.qr-page:before,.qr-page:after{content:'✳';position:absolute;color:#32271c;font-size:220px}
+.qr-page:before{top:-50px;left:-30px}
+.qr-page:after{bottom:-100px;right:-50px}
+.qr-card{width:min(430px,100%);border:1px solid #594a38;padding:42px;background:#211f1b;position:relative;z-index:1}
+.qr-card .brand-mark{width:74px;height:74px;border-radius:50%;background:#090909;display:flex;flex-direction:column;align-items:center;justify-content:center;font:600 12px/.95 'Oswald',sans-serif}
+.brand-mark svg{width:18px;height:18px;stroke:#f5ebdd;fill:none;stroke-width:1.6}
+.qr-card .eyebrow{margin-top:32px;color:#c8863a}
+.qr-card h1{font:600 50px/.98 'Oswald',sans-serif;margin:0 0 15px}
+.qr-card>p:not(.eyebrow){font-size:12px;color:#bdb1a2;line-height:1.7;margin-bottom:22px}
+.qr-card .button svg{width:17px;stroke:currentColor;fill:none;stroke-width:1.8}
+.qr-order-intro{padding:42px max(calc((100vw - 1180px)/2),24px) 32px;background:#e9dbc7;border-bottom:1px solid #d6c6b1}
+.qr-order-intro .eyebrow{margin-bottom:10px}
+.qr-order-intro h1{font:600 clamp(36px,5vw,54px)/1 'Oswald',sans-serif;letter-spacing:-.025em;margin:0 0 10px}
+.qr-order-intro h1 em{font-weight:500;color:#a26032}
+.qr-order-intro>p:last-child{font-size:11px;color:#74634f;margin:0}
+.qr-order-intro+.menu-section{padding-top:36px}
+.qr-table-label{margin-left:auto;color:#805b3b;background:#ecdfce;padding:9px 11px;font-size:8px;font-weight:700;letter-spacing:.12em;white-space:nowrap}

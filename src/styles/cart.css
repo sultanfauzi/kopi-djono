@@ -1,0 +1,44 @@
+.floating-cart{position:fixed;bottom:19px;right:max(calc((100vw - 1180px)/2),22px);z-index:25;height:51px;padding:0 15px 0 8px;border:0;background:#1a1a1a;color:#fff;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px #1a1a1a35;transition:.2s}
+.floating-cart:hover{transform:translateY(-2px)}
+.floating-icon{width:35px;height:35px;background:#332b22;display:grid;place-items:center;position:relative}
+.floating-icon i{border-color:#332b22}
+.floating-label{font-size:10px;color:#ddd2c5}
+.floating-cart b{font-size:10px;border-left:1px solid #4e473d;padding-left:10px}
+.drawer-backdrop{position:fixed;inset:0;background:#150f0bc4;z-index:60;display:flex;justify-content:flex-end;animation:fade .2s}
+.cart-drawer{height:100%;width:min(440px,100%);background:#f5ebdd;padding:25px;display:flex;flex-direction:column;overflow-y:auto;animation:slide .25s ease-out}
+.drawer-head{display:flex;align-items:flex-start;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid #ddceba}
+.drawer-head .eyebrow{margin-bottom:5px}
+.drawer-head h2{font-size:30px;margin:0}
+.cart-empty{margin:auto;text-align:center;max-width:260px;padding:35px 0}
+.empty-cup{font-size:45px;filter:grayscale(1);margin-bottom:14px}
+.cart-empty h3{font:600 24px 'Oswald',sans-serif;margin-bottom:7px}
+.cart-empty p{font-size:11px;color:#827463;line-height:1.6;margin-bottom:18px}
+.cart-empty .button{margin:auto}
+.cart-lines{padding:9px 0;overflow:auto}
+.cart-line{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #e1d5c5}
+.cart-line .cup-art{flex:0 0 40px;width:40px;height:51px}
+.cart-line .cup-sleeve{width:25px;height:25px;font-size:7px}
+.cart-line .cup-ice{display:none}
+.cart-line-title{display:flex;flex-direction:column;gap:5px;flex:1}
+.cart-line-title b{font:600 15px 'Oswald',sans-serif}
+.cart-line-title span{font-size:10px;color:#857461}
+.quantity{display:flex;align-items:center;gap:8px}
+.quantity button{width:26px;height:26px;border:1px solid #d7c7b2;background:transparent;display:grid;place-items:center}
+.quantity span{font-size:11px;font-weight:700;min-width:10px;text-align:center}
+.order-form{padding:13px 0;display:flex;flex-direction:column;gap:12px}
+.order-form label{font-size:9px;font-weight:700;display:flex;flex-direction:column;gap:6px}
+.order-form label>span{display:inline;color:#998a79;font-weight:400}
+.order-form input{height:37px;border:1px solid #d9c9b5;background:#fbf6ed;padding:0 10px;font:400 10px 'DM Sans',sans-serif;outline:none}
+.order-form input:focus{border-color:#a57242}
+.form-label{font-size:9px;font-weight:700}
+.order-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:-7px}
+.order-options button{height:34px;background:transparent;border:1px solid #d9c9b5;font-size:9px;color:#776a5a}
+.order-options button.selected{background:#e9dbc7;border-color:#8f6540;color:#1a1a1a;font-weight:700}
+.drawer-total{margin-top:auto;border-top:1px solid #ddceba;padding-top:15px}
+.drawer-total>div{display:flex;justify-content:space-between;margin-bottom:13px;align-items:center}
+.drawer-total>div span{font-size:10px;color:#827463}
+.drawer-total>div b{font:600 20px 'Oswald',sans-serif}
+.whatsapp-button{width:100%;height:44px}
+.drawer-total small{display:block;text-align:center;font-size:8px;color:#968875;margin-top:9px}
+.toast{position:fixed;z-index:70;left:50%;bottom:83px;transform:translateX(-50%);background:#1a1a1a;color:#f5ebdd;display:flex;align-items:center;gap:8px;padding:11px 15px;font-size:10px;box-shadow:0 5px 18px #1a1a1a30;animation:rise .2s}
+.toast svg{color:#c8863a}

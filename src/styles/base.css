@@ -1,0 +1,31 @@
+:root{font-family:'DM Sans',sans-serif;color:#1a1a1a;background:#f5ebdd;font-synthesis:none;text-rendering:optimizeLegibility;font-optical-sizing:auto;font-weight:400;scroll-behavior:smooth;--ink:#1a1a1a;--cream:#f5ebdd;--brown:#6b4423;--caramel:#c8863a;--muted:#897968;--line:#dfd1bd}
+*{box-sizing:border-box}
+body{margin:0;min-width:320px}
+button,a{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+h1,h2,h3,p{margin-top:0}
+.button{height:43px;padding:0 17px;display:inline-flex;justify-content:center;align-items:center;gap:10px;border:1px solid transparent;font-size:10px;font-weight:700;letter-spacing:.035em;transition:.2s}
+.button:hover{transform:translateY(-2px)}
+.button-cream{background:var(--cream);color:var(--ink)}
+.button-outline{border-color:#706657;background:transparent;color:#f5ebdd}
+.button-outline:hover{background:#292929}
+.note-stars{color:#c8863a;letter-spacing:.22em;font-size:10px}
+.bean-a{top:96px;left:12%}
+.bean-b{bottom:96px;right:12%;font-size:23px}
+.section-pad{padding-left:max(calc((100vw - 1180px)/2),24px);padding-right:max(calc((100vw - 1180px)/2),24px)}
+.section-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:27px}
+.eyebrow{color:#9a7350;margin-bottom:10px}
+.section-heading h2,.visit-head h2{font-size:50px;line-height:1;margin-bottom:0}
+.section-intro{font-size:12px;line-height:1.7;color:#847668;margin:0 5% 2px 0}
+.ice-one{left:15px}
+.ice-two{right:14px;top:26px}
+.sparkle{color:#bd7a36;font-size:13px;margin-left:6px}
+.text-link{font-size:10px;font-weight:700;display:flex;align-items:center;gap:10px;width:max-content;border-bottom:1px solid #a88865;padding-bottom:6px}
+.road-one{top:60px}
+.road-two{top:147px;transform:rotate(22deg)}
+.road-three{width:100%;left:25%;top:95px;transform:rotate(75deg)}
+.button-dark{background:#1a1a1a;color:#f5ebdd}
+.button-dark:hover{background:#4d321f}
+.close-button{border:1px solid #d5c5b0;background:transparent;width:34px;height:34px;display:grid;place-items:center}
