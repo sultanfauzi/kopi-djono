@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CartDrawer } from './components/cart/CartDrawer'
 import { FloatingCart } from './components/cart/FloatingCart'
 import { Header } from './components/layout/Header'
@@ -9,16 +9,27 @@ import { MenuSection } from './components/sections/MenuSection'
 import { StorySection } from './components/sections/StorySection'
 import { Toast } from './components/ui/Toast'
 import { useOrder } from './features/order/useOrder'
+import { useTenant } from './tenants/TenantProvider'
 
-export default function App({ qrMode = false }: { qrMode?: boolean }) {
-  const tableNumber = qrMode ? new URLSearchParams(window.location.search).get('meja') ?? '' : ''
+export default function App({ qrMode = false, scrollTarget }: { qrMode?: boolean; scrollTarget?: 'menu' | 'cerita' | 'lokasi' }) {
+  const tenant = useTenant()
+  const tableNumber = qrMode ? (new URLSearchParams(window.location.search).get('meja') ?? '').replace(/\D/g, '').slice(0, 4) : ''
   const order = useOrder({ dineIn: qrMode, initialTable: tableNumber })
   const [cartOpen, setCartOpen] = useState(false)
   const [toast, setToast] = useState('')
 
-  const addItem = (name: string) => {
-    order.addItem(name)
-    setToast(`${name} masuk keranjang`)
+  useEffect(() => {
+    if (!scrollTarget) return
+    const frame = window.requestAnimationFrame(() => {
+      document.getElementById(scrollTarget)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
+    return () => window.cancelAnimationFrame(frame)
+  }, [scrollTarget])
+
+  const addItem = (id: string) => {
+    order.addItem(id)
+    const itemName = tenant.menu.find(item => item.id === id)?.name ?? id
+    setToast(`${itemName} masuk keranjang`)
     window.setTimeout(() => setToast(''), 1800)
   }
 

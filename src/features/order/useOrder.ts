@@ -1,31 +1,34 @@
 import { useEffect, useMemo, useState } from 'react'
-import { config } from '../../config'
+import { useTenant } from '../../tenants/TenantProvider'
 
 export type Cart = Record<string, number>
 export type OrderType = 'Ambil sendiri' | 'Makan di tempat'
 
-function readCart(): Cart {
+function readCart(storageKey: string, validIds: Set<string>): Cart {
   try {
-    return JSON.parse(localStorage.getItem('djono-cart') || '{}') as Cart
+    const saved = JSON.parse(localStorage.getItem(storageKey) || '{}') as Record<string, unknown>
+    return Object.fromEntries(Object.entries(saved).filter(([id, quantity]) => validIds.has(id) && Number.isInteger(quantity) && Number(quantity) > 0).map(([id, quantity]) => [id, Number(quantity)]))
   } catch {
     return {}
   }
 }
 
 export function useOrder({ dineIn = false, initialTable = '' }: { dineIn?: boolean; initialTable?: string } = {}) {
-  const [cart, setCart] = useState<Cart>(readCart)
+  const tenant = useTenant()
+  const storageKey = `menu-kedai-cart:${tenant.slug}`
+  const [cart, setCart] = useState<Cart>(() => readCart(storageKey, new Set(tenant.menu.map(item => item.id))))
   const [customerName, setCustomerName] = useState('')
   const [note, setNote] = useState('')
   const [orderType, setOrderType] = useState<OrderType>(dineIn ? 'Makan di tempat' : 'Ambil sendiri')
   const [table, setTable] = useState(initialTable)
 
   useEffect(() => {
-    localStorage.setItem('djono-cart', JSON.stringify(cart))
-  }, [cart])
+    try { localStorage.setItem(storageKey, JSON.stringify(cart)) } catch { /* Keranjang tetap dipakai selama halaman terbuka. */ }
+  }, [cart, storageKey])
 
-  const items = useMemo(() => config.menu.filter(item => cart[item.name] > 0), [cart])
-  const itemCount = Object.values(cart).reduce((sum, quantity) => sum + quantity, 0)
-  const total = items.reduce((sum, item) => sum + item.price * cart[item.name], 0)
+  const items = useMemo(() => tenant.menu.filter(item => cart[item.id] > 0), [tenant.menu, cart])
+  const itemCount = Object.values(cart).reduce<number>((sum, quantity) => sum + Number(quantity), 0)
+  const total = items.reduce((sum, item) => sum + item.price * cart[item.id], 0)
 
   const updateQuantity = (name: string, amount: number) => {
     setCart(current => {
